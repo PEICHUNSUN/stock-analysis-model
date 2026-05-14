@@ -1,0 +1,176 @@
+{
+  "stocks": {
+    "TSLA": {
+      "name": "Tesla Inc.",
+      "attributes": ["Growth", "Cyclical"],
+      "adjustments": {
+        "profitable": false,
+        "ai_narrative": true,
+        "high_valuation": true,
+        "high_competition": true
+      },
+      "notes": "高波動、高估值，對 Macro 環境極為敏感"
+    },
+    "NVDA": {
+      "name": "NVIDIA Corporation",
+      "attributes": ["Growth", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": true,
+        "high_competition": false
+      },
+      "notes": "AI 敘事強，獲利穩定，目前估值偏高"
+    },
+    "AAPL": {
+      "name": "Apple Inc.",
+      "attributes": ["Defensive", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": false,
+        "high_valuation": false,
+        "high_competition": false
+      },
+      "notes": "現金流穩定，防禦性強"
+    },
+    "MSFT": {
+      "name": "Microsoft Corporation",
+      "attributes": ["Growth", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": false,
+        "high_competition": false
+      },
+      "notes": "雲端+AI，獲利穩定，品質最高的成長股之一"
+    },
+    "AMZN": {
+      "name": "Amazon.com Inc.",
+      "attributes": ["Growth", "Cyclical"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": false,
+        "high_competition": true
+      },
+      "notes": "電商+雲端 AWS，景氣敏感度中等"
+    },
+    "META": {
+      "name": "Meta Platforms Inc.",
+      "attributes": ["Growth", "Cyclical"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": false,
+        "high_competition": true
+      },
+      "notes": "廣告收入對景氣敏感，AI 投資力道大"
+    },
+    "GOOGL": {
+      "name": "Alphabet Inc.",
+      "attributes": ["Growth", "Cyclical", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": false,
+        "high_competition": true
+      },
+      "notes": "廣告+AI+雲端，獲利穩定"
+    },
+    "AMD": {
+      "name": "Advanced Micro Devices",
+      "attributes": ["Growth", "Cyclical"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": true,
+        "high_valuation": true,
+        "high_competition": true
+      },
+      "notes": "與 NVDA 高度競爭，高波動"
+    },
+    "JPM": {
+      "name": "JPMorgan Chase & Co.",
+      "attributes": ["Cyclical", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": false,
+        "high_valuation": false,
+        "high_competition": false
+      },
+      "notes": "景氣敏感，但財務體質最強的銀行"
+    },
+    "JNJ": {
+      "name": "Johnson & Johnson",
+      "attributes": ["Defensive", "Quality"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": false,
+        "high_valuation": false,
+        "high_competition": false
+      },
+      "notes": "典型防禦型，配息穩定"
+    },
+    "XOM": {
+      "name": "Exxon Mobil Corporation",
+      "attributes": ["Cyclical"],
+      "adjustments": {
+        "profitable": true,
+        "ai_narrative": false,
+        "high_valuation": false,
+        "high_competition": false
+      },
+      "notes": "能源景氣敏感，油價連動"
+    },
+    "CRCL": {
+      "name": "Circle Internet Group",
+      "attributes": ["Growth"],
+      "adjustments": {
+        "profitable": false,
+        "ai_narrative": true,
+        "high_valuation": true,
+        "high_competition": true
+      },
+      "notes": "新興、高風險，穩定性低"
+    }
+  },
+
+  "adjustment_scores": {
+    "profitable": 10,
+    "ai_narrative": 10,
+    "high_valuation": -10,
+    "high_competition": -5
+  },
+
+  "macro_adjustment": {
+    "Risk-on": {
+      "Growth": 20,
+      "Cyclical": 15,
+      "Defensive": -10,
+      "Quality": 5
+    },
+    "偏多": {
+      "Growth": 10,
+      "Cyclical": 8,
+      "Defensive": -5,
+      "Quality": 5
+    },
+    "Neutral": {
+      "Growth": 0,
+      "Cyclical": 0,
+      "Defensive": 0,
+      "Quality": 0
+    },
+    "Risk-off": {
+      "Growth": -20,
+      "Cyclical": -15,
+      "Defensive": 10,
+      "Quality": 5
+    },
+    "強Risk-off": {
+      "Growth": -25,
+      "Cyclical": -20,
+      "Defensive": 15,
+      "Quality": 8
+    }
+  }
+}

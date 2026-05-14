@@ -1,0 +1,19 @@
+# 股票分析模型 - 所需套件
+# 安裝方式：pip install -r requirements.txt
+
+# 資料抓取
+yfinance==0.2.54          # 抓個股價格、基本面資料
+fredapi==0.5.2            # 抓 FRED 總經數據
+requests==2.32.3          # HTTP 請求
+
+# 資料處理
+pandas==2.2.3             # 資料表格處理
+numpy==2.2.5              # 數值計算
+
+# AI 報告生成
+anthropic==0.52.0         # Claude API
+
+# 環境變數
+python-dotenv==1.1.0      # 讀取 .env 檔案
+
+ta       # 技術指標計算（RSI、MA）
