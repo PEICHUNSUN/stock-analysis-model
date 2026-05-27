@@ -65,19 +65,34 @@ def get_technical_analysis(stock_data: dict, tech_result: dict) -> str:
 
 
 def get_scenario_bullish(ticker: str, stock_data: dict, high_20d: float, close: float) -> str:
-    """多頭情境"""
+    """
+    多頭情境：給一個機械式的「短期上檔目標」。
+    註：這不是真正的技術壓力位（那需要分析歷史高點、整數關卡、量價結構等）。
+    這裡只是「近 20 日高點 +5%」的簡單估算，明示計算方式避免誤導。
+    """
     if high_20d and close:
         target = round(high_20d * 1.05, 2)
-        return f"若多頭延續，{ticker} 有機會挑戰 {target} 附近的壓力位。此時應持股待漲，設定停損在近期支撐位以下。"
+        return (
+            f"若多頭延續，{ticker} 短期上檔目標約 ${target}"
+            f"（估算方式：近 20 日高點 ${high_20d} × 1.05，**非真實技術壓力位**）。"
+            f"建議持股待漲，並依個人策略設定停損。"
+        )
     else:
         return f"若多頭延續，{ticker} 應繼續挑戰更高位置。建議持股，設定合理停損保護利潤。"
 
 
 def get_scenario_bearish(ticker: str, stock_data: dict, low_20d: float, close: float) -> str:
-    """反轉情境"""
+    """
+    反轉情境：給一個機械式的「短期下檔風險區」。
+    同上，這不是真正的技術支撐位，只是「近 20 日低點 -5%」的簡單估算。
+    """
     if low_20d and close:
-        support = round(low_20d * 0.95, 2)
-        return f"若反轉確認，{ticker} 可能測試 {support} 的支撐位。此時應減少倉位，跌破支撐位應及時止損。"
+        risk_zone = round(low_20d * 0.95, 2)
+        return (
+            f"若反轉確認，{ticker} 短期下檔風險區約 ${risk_zone}"
+            f"（估算方式：近 20 日低點 ${low_20d} × 0.95，**非真實技術支撐位**）。"
+            f"建議減少倉位，跌破近期低點應重新評估。"
+        )
     else:
         return f"若反轉確認，{ticker} 應迅速下跌。建議立即減倉，設定嚴格停損。"
 

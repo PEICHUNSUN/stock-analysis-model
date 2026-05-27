@@ -17,3 +17,6 @@ anthropic==0.52.0         # Claude API
 python-dotenv==1.1.0      # 讀取 .env 檔案
 
 ta       # 技術指標計算（RSI、MA）
+
+# MCP Server（讓 Claude Desktop / Claude Code 可呼叫此模型）
+mcp>=1.27.0
